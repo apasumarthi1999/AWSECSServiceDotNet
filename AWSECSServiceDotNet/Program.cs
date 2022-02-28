@@ -115,8 +115,8 @@ namespace AWSECSTaskCreationDotNet
          return packageUri;
       }
 
-      // Create ECS log group, task definition, container definition, run the task in the container and
-      // get the public IP of the task container
+      // Create ECS log group, task definition, container definition, service defnition and wait until the service task is running,
+      // and get the public IP of the task container
       private static async Task<string> CreateServiceWithServiceDiscovery(
          IConfiguration config,
          string serviceName,
