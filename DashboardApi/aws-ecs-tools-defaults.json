@@ -1,0 +1,28 @@
+
+{
+    "region" : "ap-south-1",
+    "profile" : "Prod AWS ECS User",
+    "configuration" : "Release",
+    "image-tag"     : "dashboardapi:latest",
+    "docker-build-working-dir" : "",
+    "cluster"                  : "algorum-user-strategy-cluster",
+    "launch-type"              : "FARGATE",
+    "launch-subnets"           : "subnet-58c3da30,subnet-904907dc,subnet-25d5455e",
+    "launch-security-groups"   : "sg-263f9c5e",
+    "assign-public-ip"         : true,
+    "task-definition-name"     : "DashboardApi",
+    "task-cpu"                 : "256",
+    "task-memory"              : "512",
+    "platform-version"         : "LATEST",
+    "task-definition-task-role" : "arn:aws:iam::004682708518:role/ecsTaskExecutionRole",
+    "task-execution-role"       : "ecsTaskExecutionRole",
+    "container-name"            : "DashboardApi",
+    "container-port-mapping"    : "80:80",
+    "container-environment-variables" : "\"ASPNETCORE_ENVIRONMENT\"=\"Production\"",
+    "skip-image-push"                 : false,
+    "cluster-service"                 : "DashboardApi",
+    "desired-count"                   : 1,
+    "deployment-minimum-healthy-percent" : 50,
+    "deployment-maximum-percent"         : 200,
+    "vstoolkit-deployment-mode"          : "DeployService"
+}

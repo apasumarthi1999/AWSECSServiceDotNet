@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.CloudWatchLogs" Version="3.7.2.21" />
+    <PackageReference Include="AWSSDK.EC2" Version="3.7.59.8" />
+    <PackageReference Include="AWSSDK.ECR" Version="3.7.2.24" />
+    <PackageReference Include="AWSSDK.ECS" Version="3.7.4.34" />
+    <PackageReference Include="AWSSDK.ServiceDiscovery" Version="3.7.3.94" />
+    <PackageReference Include="Docker.DotNet" Version="3.125.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Api.Models\Api.Models.csproj" />
+  </ItemGroup>
+
+</Project>
